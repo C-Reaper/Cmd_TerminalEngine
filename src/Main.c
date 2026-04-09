@@ -1,5 +1,3 @@
-#ifdef __linux__
-
 #include "/home/codeleaded/System/Static/Library/TerminalEngine.h"
 
 void Update(TerminalEngine* te){
@@ -27,26 +25,3 @@ int main() {
     
     return 0;
 }
-
-#elif defined _WIN64
-
-#include "TerminalWindow.h"
-
-Window *w;
-
-void Setup(AlxWindow* w){
-	
-}
-void Update(){
-	ClearScreen(w);
-	wchar_t s[] = L"Hello String\0";
-	RenderString(w,s,13,10,20);
-}
-
-int main(int argc,char **argv){
-	w = Init(120.0f,120.0f,SetUp,Update);
-	if(w!=NULL) Start(w);
-	return 0;
-}
-
-#endif
