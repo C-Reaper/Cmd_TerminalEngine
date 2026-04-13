@@ -12,7 +12,7 @@ void Update(TerminalEngine* te){
                 Term_Color_New(0,0,0,0,0,0)
             );
     }
-    if(InputKeyboard_Get(&te->ikb,INPUTKEYBOARD_KEY_Q).PRESSED){
+    if(InputKeyboard_Get(&te->ikb,ALX_KEY_Q).PRESSED){
         te->Running = 0;
     }
 }
