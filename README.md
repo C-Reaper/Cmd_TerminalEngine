@@ -1,193 +1,43 @@
-# Cmd_TerminalEngine
+# Project README
 
+## Overview
+This project is a simple C application that utilizes a custom TerminalEngine library to create a terminal-based user interface. The application listens for mouse and keyboard events, updates the terminal display accordingly, and exits when the 'Q' key is pressed.
 
-## Project Overview
+## Features
+- **Mouse Interaction**: The application can detect left mouse clicks within the terminal window and change the pixel color at the click location.
+- **Keyboard Interaction**: The application can detect the 'Q' key press to exit the application.
+- **Cross-platform Build**: The project includes Makefiles for building on Linux, Windows, Wine (for cross-compiling to Windows), and WebAssembly.
 
-This project implements specialized functionality related to terminalengine.
-
-## Core Components
-
-### Main Functionality
-- Implements core algorithms for terminalengine
-- Efficient data structures
-- Optimized performance
-- Clean code organization
-
-### Technical Features
-- C/C++ implementation
-- Dynamic memory management
-- Platform-independent design
-- Real-time capable
-
-### Architecture
-- Module separation
-- Clear interface design
-- Proper abstraction layers
-- Extensible design
-
-## Use Cases
-- Production systems
-- Educational purposes
-- Research applications
-- Performance-critical operations
-
-## Performance Characteristics
-- Optimized algorithms
-- Efficient memory usage
-- Scalable architecture
-- Minimal overhead
-
-## Implementation Quality
-- Well-organized code
-- Meaningful naming
-- Proper error handling
-- Memory management
-
-## Build and Deployment
-- Standard C/C++ compilation
-- Makefile-based building
-- Cross-platform support
-- Easy integration
-
-
-## Building the Project
-
+## Project Structure
 ### Prerequisites
-- C/C++ Compiler (GCC, Clang, or MSVC)
+- C/C++ Compiler and Debugger (GCC, Clang)
 - Make utility
 - Standard development tools
+- TerminalEngine.h library
 
-### Build Steps
+## Build & Run
+To build the project, navigate to the project directory and run the following command:
 
-1. Navigate to project directory:
-```bash
-cd Cmd_TerminalEngine
-```
-
-2. Build the project:
-```bash
+```sh
 make -f Makefile.(os) all
 ```
 
-3. For clean rebuild:
-```bash
+Replace `(os)` with `linux`, `windows`, `wine`, or `web` depending on your target platform.
+
+For a clean rebuild, use:
+
+```sh
 make -f Makefile.(os) clean
 make -f Makefile.(os) all
 ```
 
-4. If there are ./bin and ./libs directories, build libs with:
-```bash
-make -f Makefile.(os) cleanlib
-make -f Makefile.(os) lib
-```
+To execute the built application, run:
 
-### Build Options
-```bash
-make -f Makefile.(os) all         # build output
-make -f Makefile.(os) do        # build + exe output
-make -f Makefile.(os) clean   # Remove build artifacts
-```
-
-## Running the Project
-
-Execute the compiled binary:
-
-```bash
-./build/Main(.exe)
-```
-
-Or using make:
-```bash
+```sh
 make -f Makefile.(os) exe
 ```
 
-## Project Organization
-
-```
-Cmd_TerminalEngine/
-├── src/
-│   ├── Main.c          # Entry point
-│   └── *.c             # Implementation files
-├── Makefile            # Build configuration
-└── README.md           # This file
-```
-
-## Technical Details
-
-### Language: C/C++
-- Performance-oriented
-- Direct hardware access where needed
-- Memory efficient
-- Widely portable
-
-### Key Technologies
-- Standard C library
-- System-specific libraries as needed
-- Algorithm optimization
-- Efficient data structures
-
-### Code Quality
-- Clean, readable implementation
-- Proper error handling
-- Resource management
-- Well-documented algorithms
-
-## Development Notes
-
-### Architecture Decisions
-- Modular design for reusability
-- Efficient algorithms for performance
-- Clear separation of concerns
-- Extensible structure
-
-### Performance Optimizations
-- Algorithm efficiency
-- Memory layout optimization
-- Cache-conscious programming
-- Minimal overhead
-
-### Portability
-- Cross-platform compatible
-- Platform-specific optimizations where possible
-- Standard library usage
-- No external dependencies (where feasible)
-
-## Troubleshooting
-
-### Build Issues
-- Ensure compiler is installed
-- Check file paths and permissions
-- Verify Make installation
-- Review compiler error messages
-
-### Runtime Issues
-- Check input data validity
-- Verify file accessibility
-- Ensure sufficient memory
-- Review output format
-
-### Performance Issues
-- Check compiler optimization flags
-- Profile hot code paths
-- Review algorithm complexity
-- Consider input size
-
-## Future Improvements
-
-Potential enhancements:
-- Additional optimization opportunities
-- Extended functionality
-- Platform-specific optimizations
-- Performance profiling
-
-## References
-
-For technical background:
-- Algorithm textbooks
-- Computer science references
-- Language documentation
-- Online educational resources
-
----
-
-*Project implementing practical algorithms and data structures in C/C++*
+### Additional Build Options
+- **Build and Execute**: `make -f Makefile.(os) do`
+- **Clean Build Artifacts**: `make -f Makefile.(os) clean`
+- **Build Libraries**: For Windows, you can build the library with `make -f Makefile.windows cleanlib` followed by `make -f Makefile.windows lib`.
