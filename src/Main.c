@@ -3,7 +3,7 @@
 void Update(TerminalEngine* te){
     //TerminalCtl_Clear(&te->tc);
 
-    if(InputMouse_Get(&te->im,INPUTMOUSE_BUTTON_L).DOWN){
+    if(InputMouse_Get(&te->im,ALX_MOUSE_L).DOWN){
         if(te->im.posX>=0 && te->im.posX<te->tc.width && te->im.posY>=0 && te->im.posY<te->tc.height)
             TerminalCtl_SetPixel(
                 &te->tc,
